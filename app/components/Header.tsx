@@ -1,26 +1,30 @@
 import React from "react";
+import clsx from "clsx";
 
-// Find designers
-// Designer search
-// Quickly find your next designer
-// Post your job
-// The #1 job board for design talent
-// Inspiration
-// Jobs
-// Go Pro
-
-const links = ["Find designers", "Inspiration", "Jobs", "Go Pro"];
+import { Logo } from "../svgs";
 
 const Header = () => {
+  const links = ["Find designers", "Inspiration", "Jobs", "Go Pro"];
+
   return (
-    <nav className="p-10">
-      <ul className="text-sm font-semibold flex space-x-2">
+    <nav className="px-10 py-8 flex justify-between items-center">
+      <ul className="text-sm font-semibold flex space-x-4">
         {links.map((link) => (
           <li key={link}>
             <a href="#">{link}</a>
           </li>
         ))}
       </ul>
+      <Logo className="w-24 h-auto" />
+      <button
+        className={clsx(
+          "text-sm font-semibold text-white",
+          "bg-custom-black",
+          "px-6 py-4 rounded-full"
+        )}
+      >
+        Sign up
+      </button>
     </nav>
   );
 };

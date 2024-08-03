@@ -1,12 +1,11 @@
-export function Logo() {
+export function Logo(props: React.ComponentProps<"svg">) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="76"
-      height="30"
       fill="none"
       className="fill-current"
       viewBox="0 0 210 59"
+      {...props}
     >
       <path
         fill="currentColor"

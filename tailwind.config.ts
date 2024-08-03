@@ -11,7 +11,13 @@ const config: Config = {
       mona: ["var(--font-mona)"],
       serif: ["var(--font-serif)"],
     },
-    extend: {},
+    extend: {
+      colors: {
+        custom: {
+         black: "var(--color-primary)",
+       }
+      },
+    },
   },
   plugins: [],
 };
