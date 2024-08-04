@@ -1,9 +1,9 @@
+import Hero from "./components/HeroSection/Hero";
+
 const Home = () => {
   return (
     <main className="">
-      <h1 className="font-serif text-3xl">
-        The world’s destination for design
-      </h1>
+      <Hero />
     </main>
   );
 };

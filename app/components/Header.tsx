@@ -1,6 +1,6 @@
 import React from "react";
-import clsx from "clsx";
 
+import RoundedBlackButton from "./RoundedBlackButton";
 import { Logo } from "../svgs";
 
 const Header = () => {
@@ -8,24 +8,18 @@ const Header = () => {
 
   return (
     <nav className="px-10 py-8 flex justify-between items-center">
-      <ul className="text-sm font-semibold flex space-x-4">
-        {links.map((link) => (
-          <li key={link}>
-            <a href="#">{link}</a>
-          </li>
-        ))}
-      </ul>
-      <Logo className="w-24 h-auto" />
-      <button
-        className={clsx(
-          "text-sm font-semibold text-white",
-          "bg-custom-black hover:bg-[#565564]",
-          "transition-colors duration-300",
-          "px-6 py-4 rounded-full"
-        )}
-      >
-        Sign up
-      </button>
+      <div className="flex gap-x-10">
+        <Logo className="w-24 h-auto xl:hidden" />
+        <ul className="text-sm font-semibold hidden space-x-8 md:flex">
+          {links.map((link) => (
+            <li key={link}>
+              <a href="#">{link}</a>
+            </li>
+          ))}
+        </ul>
+      </div>
+      <Logo className="w-24 h-auto hidden xl:block" />
+      <RoundedBlackButton label="Sign up" />
     </nav>
   );
 };

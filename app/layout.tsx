@@ -3,7 +3,6 @@ import { Source_Serif_4 } from "next/font/google";
 import localFont from "next/font/local";
 import clsx from "clsx";
 import "./globals.css";
-import Header from "./components/Header";
 
 const monaFont = localFont({
   src: "./fonts/Mona-Sans.woff2",
@@ -29,7 +28,6 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={clsx(monaFont.variable, serifFont.variable)}>
-        <Header />
         {children}
       </body>
     </html>
