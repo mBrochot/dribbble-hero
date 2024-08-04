@@ -19,7 +19,8 @@ const Header = () => {
       <button
         className={clsx(
           "text-sm font-semibold text-white",
-          "bg-custom-black",
+          "bg-custom-black hover:bg-[#565564]",
+          "transition-colors duration-300",
           "px-6 py-4 rounded-full"
         )}
       >
