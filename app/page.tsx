@@ -1,6 +1,8 @@
-import Hero from "./components/HeroSection/Hero";
+import { type ReactElement } from "react";
 
-const Home = () => {
+import { Hero } from "components/HeroSection";
+
+const Home = (): ReactElement => {
   return (
     <main className="">
       <Hero />

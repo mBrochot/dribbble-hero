@@ -1,9 +1,7 @@
 import { type ReactElement } from "react";
 import clsx from "clsx";
 
-import Header from "../Header";
-import Badge from "./Badge";
-import RoundedBlackButton from "../RoundedBlackButton";
+import { Badge, Header, RoundedBlackButton } from "components/HeroSection";
 
 const Hero = (): ReactElement => {
   return (
@@ -20,9 +18,9 @@ const Hero = (): ReactElement => {
         >
           The world’s destination for design
         </h1>
-        <p className="text-lg md:text-xl leading-9 text-center px-8">
-          Get inspired by the work of millions of top-rated designers & agencies
-          around the world.
+        <p className="text-lg md:text-xl leading-8 md:leading-9 text-center px-8 mb-10">
+          Get inspired by the work of millions of top-rated
+          designers&nbsp;&&nbsp;agencies around the world.
         </p>
         <RoundedBlackButton label="Get started" />
       </div>
