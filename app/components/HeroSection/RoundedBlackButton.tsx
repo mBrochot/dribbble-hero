@@ -1,5 +1,7 @@
-import { type FC, type ReactElement } from "react";
-import clsx from "clsx";
+import type { FC, ReactNode } from 'react';
+import clsx from 'clsx';
+
+import { handleLetterG } from 'utils';
 
 type RoundedBlackButtonProps = {
   label: string;
@@ -7,17 +9,17 @@ type RoundedBlackButtonProps = {
 
 const RoundedBlackButton: FC<RoundedBlackButtonProps> = ({
   label,
-}): ReactElement => {
+}): ReactNode => {
   return (
     <button
       className={clsx(
-        "text-sm font-semibold text-white",
-        "bg-custom-black hover:bg-[#565564]",
-        "transition-colors duration-300",
-        "px-6 py-4 rounded-full"
+        'text-sm font-semibold text-white',
+        'bg-custom-black hover:bg-[#565564]',
+        'transition-colors duration-300',
+        'px-6 py-3 rounded-full'
       )}
     >
-      {label}
+      {handleLetterG(label)}
     </button>
   );
 };

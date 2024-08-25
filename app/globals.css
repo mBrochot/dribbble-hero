@@ -2,12 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+
 :root {
   --color-primary: #0D0C22;
   --color-hero-background: #F8F7F4;
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --card-speed: 6s;
+  --card-gap: 32px;
 }
 
 body {

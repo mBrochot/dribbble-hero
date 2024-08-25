@@ -1,13 +1,14 @@
-import { type ReactElement } from "react";
+import type { ReactNode } from 'react';
 
 import {
   Navigation,
   RoundedBlackButton,
   SearchInput,
-} from "components/HeroSection";
-import { Logo } from "svgs";
+} from 'components/HeroSection';
+import { handleLetterG } from 'utils';
+import { Logo } from 'svgs';
 
-const Header = (): ReactElement => {
+const Header = (): ReactNode => {
   return (
     <nav className="px-10 py-8 flex justify-between items-center">
       <div className="flex gap-x-10">
@@ -18,7 +19,7 @@ const Header = (): ReactElement => {
       <div className="border flex items-center gap-6">
         <SearchInput />
         <a href="#" className="font-semibold text-sm">
-          Lo<span className="font-serif text-base">g</span> in
+          {handleLetterG('Log in')}
         </a>
         <RoundedBlackButton label="Sign up" />
       </div>

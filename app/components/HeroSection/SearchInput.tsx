@@ -1,6 +1,6 @@
-import { type ReactElement } from "react";
+import type { ReactNode } from 'react';
 
-const SearchInput = (): ReactElement => {
+const SearchInput = (): ReactNode => {
   return <div>SearchInput</div>;
   //Todo search input
 };

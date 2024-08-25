@@ -1,19 +1,24 @@
-import { type ReactElement } from "react";
-import clsx from "clsx";
+import type { ReactNode } from 'react';
+import clsx from 'clsx';
 
-import { Badge, Header, RoundedBlackButton } from "components/HeroSection";
+import {
+  Badge,
+  Header,
+  Marquee,
+  RoundedBlackButton,
+} from 'components/HeroSection';
 
-const Hero = (): ReactElement => {
+const Hero = (): ReactNode => {
   return (
-    <div className="bg-custom-heroBackground">
+    <div className="bg-custom-heroBackground overflow-x-clip border-2 border-green-700">
       <Header />
-      <div className="flex flex-col items-center pt-20">
+      <div className="flex flex-col items-center pt-20 border-2 border-blue-400 +++ w-full++">
         <Badge />
         <h1
           className={clsx(
-            "font-serif text-5xl md:text-7xl text-center",
-            "max-w-[870px]",
-            "mt-10 mb-6 px-6"
+            'font-serif text-5xl md:text-7xl text-center',
+            'max-w-[870px]',
+            'mt-10 mb-6 px-6'
           )}
         >
           The world’s destination for design
@@ -23,6 +28,7 @@ const Hero = (): ReactElement => {
           designers&nbsp;&&nbsp;agencies around the world.
         </p>
         <RoundedBlackButton label="Get started" />
+        <Marquee className="translate-y-1/3 -mt-40" />
       </div>
     </div>
   );
