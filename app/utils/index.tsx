@@ -15,3 +15,7 @@ export const handleLetterG = (word: string): ReactNode => {
   }
   return word;
 };
+
+export const getRandomBetween = (min: number, max: number) => {
+  return Math.random() * (max - min) + min;
+};
