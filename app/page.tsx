@@ -1,6 +1,6 @@
-import { type ReactElement } from "react";
+import type { ReactElement } from 'react';
 
-import { Hero } from "components/HeroSection";
+import { Hero } from 'components/HeroSection';
 
 const Home = (): ReactElement => {
   return (
