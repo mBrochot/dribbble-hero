@@ -5,3 +5,8 @@ export type Card = {
     mediaType: 'image' | 'video';
     mediaUrl: string;
 }
+
+export enum MediaType {
+    IMAGE = 'image',
+    VIDEO = 'video'
+}
