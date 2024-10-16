@@ -7,6 +7,7 @@ import {
   Marquee,
   RoundedBlackButton,
 } from 'components/HeroSection';
+import { handleLetterG } from 'utils';
 
 const Hero = (): ReactNode => {
   return (
@@ -23,9 +24,11 @@ const Hero = (): ReactNode => {
         >
           The world’s destination for design
         </h1>
-        <p className="font-medium text-lg md:text-xl leading-8 md:leading-9 text-center px-8 mb-10">
-          Get inspired by the work of millions of top-rated
-          designers&nbsp;&&nbsp;agencies around the world.
+        <p className="font-medium text-lg md:text-xl leading-8 md:leading-9 text-center px-8 mb-10 text-balance+++">
+          {handleLetterG(
+            'Get inspired by the work of millions of top-rated designers & agencies around the world.',
+            'text-[19px] md:text-[21px]'
+          )}
         </p>
         <RoundedBlackButton label="Get started" height="h-14" />
         <Marquee className="translate-y-1/3 -mt-40" />
