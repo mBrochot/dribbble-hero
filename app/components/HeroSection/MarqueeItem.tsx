@@ -32,7 +32,8 @@ const MarqueeItem: FC<MarqueeItemProps> = ({
       className={clsx(
         'relative',
         'flex items-center justify-center',
-        'w-[273px] aspect-card rounded-[32px] overflow-hidden',
+        'w-[218px] md:w-[273px] aspect-cardMobile md:aspect-cardDesktop',
+        'rounded-[32px] overflow-hidden',
         'transition-all ease-out opacity-[--card-opacity]',
         'duration-[600ms] delay-[--card-reveal-delay]'
       )}
@@ -66,7 +67,7 @@ const MarqueeItem: FC<MarqueeItemProps> = ({
         }
         className={clsx(
           'z-10 absolute',
-          'inset-0 px-5 py-4',
+          'inset-0 px-4 md:px-5 py-3 md:py-4',
           'flex flex-col justify-end',
           'space-y-3',
           'transition-all ease-out opacity-[--info-opacity]',
@@ -88,9 +89,10 @@ const MarqueeItem: FC<MarqueeItemProps> = ({
             <li
               key={index}
               className={clsx(
-                'px-3 py-0.5',
+                'px-[9px] md:px-3 py-0.5',
                 'font-semibold text-[11px] leading-5 text-white',
-                'border border-white/20 rounded-full'
+                'border border-white/20 rounded-full',
+                'shrink-0'
               )}
             >
               {handleLetterG(tag, 'text-[12px]')}

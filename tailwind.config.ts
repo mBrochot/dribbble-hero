@@ -21,7 +21,8 @@ const config: Config = {
         }
       },
       aspectRatio: {
-        card: "273 / 340",
+        cardMobile: "218 / 272",
+        cardDesktop: "273 / 340",
       },
       animation: {
         badge: 'colorCycle 32s linear infinite',
