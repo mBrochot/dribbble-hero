@@ -19,9 +19,9 @@ const Header = (): ReactNode => {
       <div className="border flex items-center gap-6">
         <SearchInput />
         <a href="#" className="font-semibold text-sm">
-          {handleLetterG('Log in')}
+          {handleLetterG('Log in', 'text-[15px]')}
         </a>
-        <RoundedBlackButton label="Sign up" />
+        <RoundedBlackButton label="Sign up" height="h-12" />
       </div>
     </nav>
   );

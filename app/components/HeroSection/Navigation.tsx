@@ -8,7 +8,7 @@ const Navigation = (): ReactNode => {
   return (
     <ul className="text-sm font-semibold hidden space-x-8 md:flex items-center">
       {links.map((link, index) => (
-        <li key={index}>{handleLetterG(link)}</li>
+        <li key={index}>{handleLetterG(link, 'text-[15px]')}</li>
       ))}
     </ul>
   );

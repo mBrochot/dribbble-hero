@@ -2,7 +2,7 @@ import type { FC, ReactNode, CSSProperties } from 'react';
 import clsx from 'clsx';
 
 import { type Card, MediaType } from 'models';
-import { getRandomBetween } from 'utils';
+import { getRandomBetween, handleLetterG } from 'utils';
 
 type MarqueeItemProps = {
   isDisplayed?: boolean;
@@ -33,7 +33,7 @@ const MarqueeItem: FC<MarqueeItemProps> = ({
         'relative',
         'flex items-center justify-center',
         'w-[273px] aspect-card rounded-[32px] overflow-hidden',
-        `transition-all ease-out opacity-[--card-opacity]`,
+        'transition-all ease-out opacity-[--card-opacity]',
         'duration-[600ms] delay-[--card-reveal-delay]'
       )}
     >
@@ -44,7 +44,6 @@ const MarqueeItem: FC<MarqueeItemProps> = ({
           alt={name}
         />
       ) : (
-        // get started renvoit sur mon likedin et ouvre  message
         <video
           className="relative inset-0 h-full object-cover"
           src={mediaUrl}
@@ -54,16 +53,25 @@ const MarqueeItem: FC<MarqueeItemProps> = ({
         />
       )}
       <div
+        style={
+          {
+            backgroundImage:
+              'linear-gradient(rgba(0, 0, 0, 0) 51.91%, rgba(0, 0, 0, 0.3) 75.88%)',
+            '--info-reveal-delay': `${revealDelay + 0.3}s`,
+            '--info-opacity': isDisplayed ? 1 : 0,
+            transform: isDisplayed
+              ? 'perspective(300px) translate3d(0, 0, 0)'
+              : 'perspective(300px) translate3d(0, 0, 16px)',
+          } as CSSProperties
+        }
         className={clsx(
           'z-10 absolute',
           'inset-0 px-5 py-4',
           'flex flex-col justify-end',
-          'space-y-3'
+          'space-y-3',
+          'transition-all ease-out opacity-[--info-opacity]',
+          'duration-1000 delay-[--info-reveal-delay]'
         )}
-        style={{
-          backgroundImage:
-            'linear-gradient(rgba(0, 0, 0, 0) 51.91%, rgba(0, 0, 0, 0.3) 75.88%)',
-        }}
       >
         <div
           className={clsx(
@@ -72,8 +80,8 @@ const MarqueeItem: FC<MarqueeItemProps> = ({
             'space-y-2'
           )}
         >
-          <p>{name}</p>
-          <p>{title}</p>
+          <p>{handleLetterG(name)}</p>
+          <p>{handleLetterG(title)}</p>
         </div>
         <ul className="flex space-x-2">
           {tags.map((tag, index) => (
@@ -85,7 +93,7 @@ const MarqueeItem: FC<MarqueeItemProps> = ({
                 'border border-white/20 rounded-full'
               )}
             >
-              {tag}
+              {handleLetterG(tag, 'text-[12px]')}
             </li>
           ))}
         </ul>
