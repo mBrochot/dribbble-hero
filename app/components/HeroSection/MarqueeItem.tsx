@@ -2,7 +2,7 @@ import type { FC, ReactNode, CSSProperties } from 'react';
 import clsx from 'clsx';
 
 import { type Card, MediaType } from 'models';
-import { getRandomBetween, handleLetterG } from 'utils';
+import { getRandomBetween, handleLetters } from 'utils';
 
 type MarqueeItemProps = {
   isDisplayed?: boolean;
@@ -81,8 +81,8 @@ const MarqueeItem: FC<MarqueeItemProps> = ({
             'space-y-2'
           )}
         >
-          <p>{handleLetterG(name)}</p>
-          <p>{handleLetterG(title)}</p>
+          <p>{handleLetters(name)}</p>
+          <p>{handleLetters(title)}</p>
         </div>
         <ul className="flex space-x-2">
           {tags.map((tag, index) => (
@@ -95,7 +95,7 @@ const MarqueeItem: FC<MarqueeItemProps> = ({
                 'shrink-0'
               )}
             >
-              {handleLetterG(tag, 'text-[12px]')}
+              {handleLetters(tag, 'text-[12px]')}
             </li>
           ))}
         </ul>

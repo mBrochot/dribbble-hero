@@ -1,7 +1,7 @@
 import type { FC, ReactNode } from 'react';
 import clsx from 'clsx';
 
-import { handleLetterG } from 'utils';
+import { handleLetters } from 'utils';
 
 type RoundedBlackButtonProps = {
   label: string;
@@ -22,7 +22,7 @@ const RoundedBlackButton: FC<RoundedBlackButtonProps> = ({
         [height]
       )}
     >
-      {handleLetterG(label, 'text-[15px]')}
+      {handleLetters(label, 'text-[15px]')}
     </button>
   );
 };

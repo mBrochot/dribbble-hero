@@ -7,7 +7,7 @@ import {
   Marquee,
   RoundedBlackButton,
 } from 'components/HeroSection';
-import { handleLetterG } from 'utils';
+import { handleLetters } from 'utils';
 
 const Hero = (): ReactNode => {
   return (
@@ -25,7 +25,7 @@ const Hero = (): ReactNode => {
           The world’s destination for design
         </h1>
         <p className="font-medium text-lg md:text-xl leading-8 md:leading-9 text-center px-8 mb-10 text-balance+++">
-          {handleLetterG(
+          {handleLetters(
             'Get inspired by the work of millions of top-rated designers & agencies around the world.',
             'text-[19px] md:text-[21px]'
           )}

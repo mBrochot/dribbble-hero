@@ -5,7 +5,7 @@ import {
   RoundedBlackButton,
   SearchInput,
 } from 'components/HeroSection';
-import { handleLetterG } from 'utils';
+import { handleLetters } from 'utils';
 import { Logo } from 'svgs';
 
 const Header = (): ReactNode => {
@@ -19,7 +19,7 @@ const Header = (): ReactNode => {
       <div className="border flex items-center gap-6">
         <SearchInput />
         <a href="#" className="font-semibold text-sm">
-          {handleLetterG('Log in', 'text-[15px]')}
+          {handleLetters('Log in', 'text-[15px]')}
         </a>
         <RoundedBlackButton label="Sign up" height="h-12" />
       </div>
