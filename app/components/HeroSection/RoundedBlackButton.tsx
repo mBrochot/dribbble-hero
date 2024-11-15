@@ -19,6 +19,7 @@ const RoundedBlackButton: FC<RoundedBlackButtonProps> = ({
         'bg-custom-black hover:bg-[#565564]',
         'transition-colors duration-300',
         'px-6 py-3 rounded-full',
+        'shrink-0',
         [height]
       )}
     >

@@ -26,7 +26,7 @@ const Marquee = ({ className }: ComponentProps<'section'>): ReactNode => {
           'grid grid-flow-col auto-cols-min',
           'gap-[--card-gap]',
           'animate-slide',
-          'border-2 min-w-fit'
+          'min-w-fit'
         )}
       >
         {[...cards, ...cards].map((props, index) => {

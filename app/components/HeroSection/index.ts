@@ -5,4 +5,4 @@ export { default as Marquee } from './Marquee';
 export { default as MarqueeItem } from './MarqueeItem';
 export { default as Navigation } from './Navigation';
 export { default as RoundedBlackButton } from './RoundedBlackButton';
-export { default as SearchInput } from './SearchInput';
+export { default as SearchButton } from './SearchButton';

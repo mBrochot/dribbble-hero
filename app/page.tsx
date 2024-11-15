@@ -1,10 +1,10 @@
-import type { ReactElement } from 'react';
+import type { ReactNode } from 'react';
 
 import { Hero } from 'components/HeroSection';
 
-const Home = (): ReactElement => {
+const Home = (): ReactNode => {
   return (
-    <main className="">
+    <main>
       <Hero />
     </main>
   );
