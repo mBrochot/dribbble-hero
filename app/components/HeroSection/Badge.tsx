@@ -9,7 +9,7 @@ const Badge = (): ReactNode => {
         'rounded-full',
         'flex justify-center items-center',
         'animate-badge hover:opacity-80 transition duration-300 ease-in-out',
-        'font-serif text-base font-semibold'
+        'font-serif text-base font-semibold text-center'
       )}
     >
       <a href="#">Over 3 million ready-to-work creatives!</a>

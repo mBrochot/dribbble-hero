@@ -84,7 +84,7 @@ const MarqueeItem: FC<MarqueeItemProps> = ({
           <p>{handleLetters(name)}</p>
           <p>{handleLetters(title)}</p>
         </div>
-        <ul className="flex space-x-2">
+        <ul className="flex flex-wrap gap-2">
           {tags.map((tag, index) => (
             <li
               key={index}
