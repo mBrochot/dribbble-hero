@@ -4,7 +4,7 @@ import { Search } from 'svgs';
 
 const SearchButton = (): ReactNode => {
   return (
-    <button>
+    <button className="hidden md:flex">
       <Search className="custom-black  hover:text-[#565564] transition-colors duration-300" />
     </button>
   );

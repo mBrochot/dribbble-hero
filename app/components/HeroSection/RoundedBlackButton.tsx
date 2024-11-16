@@ -15,6 +15,7 @@ const RoundedBlackButton: FC<RoundedBlackButtonProps> = ({
   return (
     <button
       className={clsx(
+        'flex items-center',
         'text-sm font-semibold text-white',
         'bg-custom-black hover:bg-[#565564]',
         'transition-colors duration-300',
@@ -23,7 +24,7 @@ const RoundedBlackButton: FC<RoundedBlackButtonProps> = ({
         [height]
       )}
     >
-      {handleLetters(label, 'text-[15px]')}
+      <span>{handleLetters(label, 'text-[15px]')}</span>
     </button>
   );
 };
