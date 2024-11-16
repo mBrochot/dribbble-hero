@@ -20,6 +20,11 @@ const config: Config = {
           heroBackground: "var(--color-hero-background)",
         }
       },
+      textColor: {
+        custom: {
+          grey: "var(--color-secondary)",
+        }
+      },
       aspectRatio: {
         cardMobile: "218 / 272",
         cardDesktop: "273 / 340",
