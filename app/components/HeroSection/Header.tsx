@@ -1,13 +1,17 @@
 import type { ReactNode } from 'react';
+import dynamic from 'next/dynamic';
 
 import clsx from 'clsx';
-import {
-  Navigation,
-  RoundedBlackButton,
-  SearchButton,
-} from 'components/HeroSection';
+import { Navigation, SearchButton } from 'components/HeroSection';
 import { handleLetters } from 'utils';
 import { Logo } from 'svgs';
+
+const LoginButton = dynamic(
+  () => import('components/HeroSection/LoginButton'),
+  {
+    ssr: false,
+  }
+);
 
 const Header = (): ReactNode => {
   return (
@@ -30,10 +34,9 @@ const Header = (): ReactNode => {
       <div className="flex items-center gap-6">
         <SearchButton />
         <a href="#" className="font-semibold text-sm hidden md:flex">
-          {handleLetters('Log in', 'text-[15px]')}
+          {handleLetters('Log', 'text-[15px]')}&nbsp;in
         </a>
-        <RoundedBlackButton label="Sign up" height="h-12 hidden md:flex" />
-        <RoundedBlackButton label="Log in" height="h-10 md:hidden" />
+        <LoginButton />
       </div>
     </nav>
   );

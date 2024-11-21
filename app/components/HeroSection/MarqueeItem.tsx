@@ -1,3 +1,5 @@
+'use client';
+
 import type { FC, ReactNode, CSSProperties } from 'react';
 import clsx from 'clsx';
 
@@ -58,7 +60,9 @@ const MarqueeItem: FC<MarqueeItemProps> = ({
           {
             backgroundImage:
               'linear-gradient(rgba(0, 0, 0, 0) 51.91%, rgba(0, 0, 0, 0.3) 75.88%)',
-            '--info-reveal-delay': `${revealDelay + 0.3}s`,
+            ...(typeof window !== 'undefined' && {
+              '--info-reveal-delay': `${revealDelay + 0.3}s`,
+            }),
             '--info-opacity': isDisplayed ? 1 : 0,
             transform: isDisplayed
               ? 'perspective(300px) translate3d(0, 0, 0)'
